@@ -36,9 +36,9 @@ export default function BlogId({ article }: Props) {
 
 
 export const getStaticPaths = async () => {
-    const data = await client.get({ endpoint: "blog" });
+    const data = await client.get({ endpoint: "articles" });
 
-    const paths = data.contents.map((content: any) => `/blog/${content.id}`);
+    const paths = data.contents.map((content: any) => `/article/${content.id}`);
     return { paths, fallback: false };
 };
 
