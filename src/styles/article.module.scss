@@ -1,0 +1,37 @@
+.wrapper {
+    width:80%;
+    margin:0 auto;
+    margin-bottom: 500px;
+}
+
+.articleHeader {
+    padding-bottom:40px;
+    border-bottom: solid 1px gray;
+}
+
+.title {
+    font-size: 5rem;
+}
+
+.tag {
+    display:inline-block;
+    font-size:1.3rem;
+    padding: 4px 8px;
+    text-align:center;
+    border-radius:8px;
+    color:ghostwhite;
+    background-color:#404040;
+}
+
+//marginの外にborderをつけるためwrapper追加
+.articleBodyWrapper {
+    min-height:200px;
+    border-left:solid 0.5px gray;
+    border-right:solid 0.5px gray;
+}
+
+.articleBody {
+    font-size:2rem;
+    width: 90%;
+    margin:40px auto;
+}
