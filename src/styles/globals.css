@@ -1,9 +1,3 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-}
-
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,17 +5,11 @@
 }
 
 body {
-  max-width: 100vw;
-  min-height: 100vh;
-  position: relative;/*←相対位置*/
-  padding-bottom: 120px;/*←footerの高さ*/
-  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
-  overflow-x: hidden;
+  min-width: 100vw;
   font-size: 100%;
   font-family: Noto Sans Japanese;
   font-weight: 100;
   background-color: aliceblue;
-  margin-top: 50px;
   color: #3c3b3b;
 }
 
@@ -29,21 +17,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-Link::after {
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 0.5px;
-  background: white;
-  transform: scale(0, 1);
-  transform-origin: left top;
-  transition: transform .3s;
-}
-
-a:hover::after {
-  transform: scale(1, 1);
 }
