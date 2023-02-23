@@ -1,29 +1,22 @@
-.wrapper {
+.container {
     width: 100%;
     height: 400px;
     background: url(https://pbs.twimg.com/media/D8k9epvUwAA343x.png:medium)
     no-repeat center;
     background-size: cover;
     overflow: hidden;
-    position: relative;
-    z-index: 0;
     display: grid;
     place-items: center;
-    h1 {
-        font-weight: 700;
-        font-family: Raleway;
-        color: #3c3b3b;
+    .blurFilter {
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(8px);
+        display: grid;
+        place-items: center;
+        h1 {
+            font-weight: 700;
+            font-family: Raleway;
+            color: #3c3b3b;
+        }
     }
-}
-
-.wrapper::before {
-    content: "";
-    background: inherit;
-    filter: blur(5px);
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
 }

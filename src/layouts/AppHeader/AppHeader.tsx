@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import styles from '@/styles/layouts/Header/Header.module.scss';
+import styles from '@/styles/layouts/AppHeader/AppHeader.module.scss';
 
 const Header: React.FC  = () => (
     <>
-        <div className={styles.wrapper}>
+        <div className={styles.container}>
             <ul className={styles.left}>
                 <li><Link href="/">home</Link></li>
                 <li><Link href="/">profile</Link></li>
