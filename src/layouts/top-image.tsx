@@ -1,4 +1,4 @@
-import styles from '@/styles/layouts/Top/Top.module.scss'
+import styles from '@/styles/layouts/top-image.module.scss'
 
 const Top: React.FC = () => {
     return (
