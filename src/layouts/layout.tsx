@@ -1,6 +1,6 @@
-import Header from '@/layouts/AppHeader/AppHeader'
-import Footer from '@/layouts/AppFooter/AppFooter'
-import Top from '@/layouts/Top/Top'
+import Header from '@/layouts/app-header'
+import Footer from '@/layouts/app-footer'
+import Top from '@/layouts/top-image'
 import { ReactNode } from 'react'
 import styles from '@/styles/layouts/Layouts.module.scss'
 
