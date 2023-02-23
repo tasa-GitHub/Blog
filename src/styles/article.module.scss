@@ -1,38 +1,42 @@
 .container {
-    width:80vw;
-    margin: 0 auto;
-    font-family: Noto Sans Japanese;
-    margin-bottom: 300px;
+  width: 100%;
 }
 
-.articleHeader {
-    padding: 30px 0;
-    border-bottom: solid 1px gray;
+.contents {
+  width:80vw;
+  margin: 0 auto;
+  font-family: Noto Sans Japanese;
+  margin-bottom: 300px;
+  animation-name: fadeinup;
+  animation-delay: 0.2s;
+  animation-duration: 0.4s;
 }
 
-.title {
-    font-size: 3rem;
-}
-
-.tag {
-    display:inline-block;
-    font-size:1.3rem;
-    padding: 4px 8px;
-    text-align:center;
-    border-radius:8px;
-    color:ghostwhite;
-    background-color:#404040;
+.title{
+  border: 0;
 }
 
 //marginの外にborderをつけるためwrapper追加
 .articleBodyWrapper {
-    min-height: 200px;
-    border-left:solid 0.5px gray;
-    border-right:solid 0.5px gray;
+  min-height: 200px;
+  padding:10px 0;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .articleBody {
-    font-size: 1.2rem;
-    width: 90%;
-    margin:40px auto;
+  font-size: 1.2rem;
+  width: 90%;
+  margin:40px auto;
+}
+
+@keyframes fadeinup{
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

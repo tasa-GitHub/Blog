@@ -16,9 +16,9 @@ const HeroPost = ({
 }: Props) => {
   return (
     <section>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
+      <div>
         <div>
-          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
+          <h3>
             <Link
               as={`/article/${slug}`}
               href="/article/[slug]"
@@ -27,12 +27,12 @@ const HeroPost = ({
               {title}
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
+          <div>
             <DateFormatter dateString={date} />
           </div>
         </div>
         <div>
-          <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
+          <p>{excerpt}</p>
         </div>
       </div>
     </section>
