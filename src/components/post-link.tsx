@@ -8,7 +8,7 @@ type Props = {
   slug: string
 }
 
-const HeroPost = ({
+const PostLink = ({
   title,
   date,
   excerpt,
@@ -39,4 +39,4 @@ const HeroPost = ({
   )
 }
 
-export default HeroPost
+export default PostLink
