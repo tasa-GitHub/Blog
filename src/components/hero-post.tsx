@@ -1,10 +1,8 @@
 import DateFormatter from './date-formatter'
-import CoverImage from './cover-image'
 import Link from 'next/link'
 
 type Props = {
   title: string
-  coverImage: string
   date: string
   excerpt: string
   slug: string
@@ -12,7 +10,6 @@ type Props = {
 
 const HeroPost = ({
   title,
-  coverImage,
   date,
   excerpt,
   slug,

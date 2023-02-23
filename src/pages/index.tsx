@@ -24,7 +24,6 @@ export default function Home({ allPosts }: Props) {
       <main className={styles.container}>
       <HeroPost
               title={heroPost.title}
-              coverImage={heroPost.coverImage}
               date={heroPost.date}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
