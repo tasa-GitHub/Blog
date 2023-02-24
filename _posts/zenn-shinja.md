@@ -1,7 +1,6 @@
 ---
 title: 'Ze◯nに憧れた底辺エンジニアの末路'
 date: '2023-02-23T05:35:07.322Z'
-ogImage:
   url: '/assets/blog/hello-world/cover.jpg'
 ---
 
