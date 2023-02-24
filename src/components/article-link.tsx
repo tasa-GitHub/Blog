@@ -1,5 +1,6 @@
 import DateFormatter from './date-formatter'
 import Link from 'next/link'
+import styles from '@/styles/components/article-link.module.scss'
 
 type Props = {
   title: string
@@ -15,23 +16,25 @@ const articleLink = ({
   slug,
 }: Props) => {
   return (
-    <section className='container'>
-      <div className='container'>
-        <h2>
-          <Link
-            as={`/article/${slug}`}
-            href="/article/[slug]"
-            className="hover:underline"
-          >
-            {title}
-          </Link>
-        </h2>
-        <div>
+    <section className={styles.container}>
+      <div className={styles.content}>
+        <div className='title'>
+          <h2>
+            <Link
+              as={`/article/${slug}`}
+              href="/article/[slug]"
+              className="hover:underline"
+            >
+              {title}
+            </Link>
+          </h2>
+        </div>
+        <div className={styles.datetime}>
           <DateFormatter dateString={date} />
         </div>
-      </div>
-      <div>
-        <p>{excerpt}</p>
+        <div>
+          <p>{excerpt}</p>
+        </div>
       </div>
     </section>
   )
