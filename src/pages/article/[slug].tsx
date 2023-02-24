@@ -64,11 +64,10 @@ export async function getStaticProps({ params }: Params) {
   const post = getPostBySlug(params.slug, [
     'title',
     'date',
+    'update',
     'slug',
-    'author',
-    'content',
     'ogImage',
-    'coverImage',
+    'content',
   ])
   const content = await markdownToHtml(post.content, {
     embedOrigin: 'https://embed.zenn.studio',

@@ -18,7 +18,7 @@ const PostLink = ({
     <section>
       <div>
         <div>
-          <h3>
+          <h2>
             <Link
               as={`/article/${slug}`}
               href="/article/[slug]"
@@ -26,7 +26,7 @@ const PostLink = ({
             >
               {title}
             </Link>
-          </h3>
+          </h2>
           <div>
             <DateFormatter dateString={date} />
           </div>
