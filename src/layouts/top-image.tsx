@@ -1,9 +1,15 @@
+import { Raleway } from 'next/font/google'
 import styles from '@/styles/layouts/top-image.module.scss'
 
-const Top: React.FC = () => {
+const raleway = Raleway({
+  weight: '700',
+  subsets: ['latin'],
+})
+
+const Top = () => {
     return (
         <>
-            <div className={styles.container}>
+            <div className={styles.container+" "+raleway.className}>
                 <div className={styles.blurFilter}>
                     <h1>hello,world.<br/>hello,polskaa.</h1>
                 </div>

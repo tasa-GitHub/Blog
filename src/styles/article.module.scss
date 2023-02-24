@@ -1,33 +1,36 @@
 .container {
-  width: 100%;
-}
-
-.contents {
   width:80vw;
   margin: 0 auto;
-  font-family: Noto Sans Japanese;
   margin-bottom: 300px;
   animation-name: fadeinup;
   animation-delay: 0.2s;
   animation-duration: 0.4s;
 }
 
-.title{
-  border: 0;
+.title {
+  padding:20px 0;
+  margin-left: 30px;
+  font-size:3rem;
+}
+
+.date {
+  padding:20px 0;
+  margin-left: 50px;
+  font-size: 1.5rem;
 }
 
 //marginの外にborderをつけるためwrapper追加
-.articleBodyWrapper {
+.content {
   min-height: 200px;
   padding:10px 0;
   background-color: white;
   border-radius: 20px;
 }
 
-.articleBody {
+.md {
   font-size: 1.2rem;
   width: 90%;
-  margin:40px auto;
+  margin: 60px auto;
 }
 
 @keyframes fadeinup{

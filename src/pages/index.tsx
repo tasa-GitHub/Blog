@@ -20,18 +20,16 @@ export default function Home({ allArticles }: Props) {
         }}
       />
       <div className={styles.container}>
-        <div className={styles.contents}>
-          {allArticles.map((article, idx) => (
-            <div key={idx}>
-            <ArticleLink
-            title={article.title}
-            date={article.date}
-            slug={article.slug}
-            excerpt={article.excerpt}
-            />
-            </div>
-          ))}
-        </div>
+        {allArticles.map((article, idx) => (
+          <div key={idx}>
+          <ArticleLink
+          title={article.title}
+          date={article.date}
+          slug={article.slug}
+          excerpt={article.excerpt}
+          />
+          </div>
+        ))}
       </div>
     </>
   )

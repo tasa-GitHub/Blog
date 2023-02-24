@@ -1,9 +1,14 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+import { Inter, Raleway } from 'next/font/google'
 import { useEffect } from 'react'
 import Layout from '../layouts/layout'
 import 'zenn-content-css'
-import NextHeadSeo from 'next-head-seo'
+
+const inter = Inter({
+  weight: '400',
+  subsets: ['latin'],
+})
 
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -11,16 +16,11 @@ export default function App({ Component, pageProps }: AppProps) {
   },[])
   return (
     <>
-      <NextHeadSeo
-          og={{
-            image: "https://tapolskasa.com/og-image.jpg",
-            type: 'website',
-            siteName: "Polskaa's BLOG",
-          }}
-          twitter={{
-            card: "summary"
-          }}
-      />
+      <style jsx global>{`
+        html {
+          font-family: ${inter.style.fontFamily};
+        }
+      `}</style>
       <Layout>
         <Component {...pageProps} />
       </Layout>

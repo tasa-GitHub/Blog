@@ -6,6 +6,7 @@ import { getArticleBySlug, getAllArticles } from 'libs/api/api'
 import markdownToHtml from 'zenn-markdown-html'
 import NextHeadSeo from 'next-head-seo'
 import styles from '@/styles/article.module.scss'
+import DateFormatter from '@/components/date-formatter'
 
 type Props = {
   article: ArticleType
@@ -20,7 +21,6 @@ export default function Article({ article }: Props) {
 
   return (
   <>
-    <article className="${styles.container} znc">
       <NextHeadSeo
         title={title}
         description='iroiro kakuyo'
@@ -30,15 +30,19 @@ export default function Article({ article }: Props) {
           type: "article"
         }}
       />
-      <div className={styles.contents}>
-        <div>
-          <div className={styles.articleHeader}>
-            <h1 className={styles.title}>
-            {article.title}
-            </h1>
+    <article className={styles.container}>
+      <div>
+        <header>
+          <h1 className={styles.title}>
+          {article.title}
+          </h1>
+          <div className={styles.date}>
+          <DateFormatter dateString={article.date}/>
           </div>
-          <div className={styles.articleBodyWrapper}>
-            <div className={styles.articleBody}>
+        </header>
+        <div className='znc'>
+          <div className={styles.content}>
+            <div className={styles.md}>
               <div
                 dangerouslySetInnerHTML={{
                 __html: `${article.content}`,
