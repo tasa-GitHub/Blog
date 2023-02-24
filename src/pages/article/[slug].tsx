@@ -1,20 +1,20 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 
-import type { PostType } from 'types/post'
-import { getPostBySlug, getAllPosts } from 'libs/api/api'
+import type { ArticleType } from 'types/article'
+import { getArticleBySlug, getAllArticles } from 'libs/api/api'
 import markdownToHtml from 'zenn-markdown-html'
 import NextHeadSeo from 'next-head-seo'
 import styles from '@/styles/article.module.scss'
 
 type Props = {
-  post: PostType
+  article: ArticleType
 };
 
-export default function Post({ post }: Props) {
+export default function Article({ article }: Props) {
   const router = useRouter()
-  const title = `${post.title} | Polskaa's BLOG`
-  if (!router.isFallback && !post?.slug) {
+  const title = `${article.title} | Polskaa's BLOG`
+  if (!router.isFallback && !article?.slug) {
     return <ErrorPage statusCode={404} />
   }
 
@@ -24,7 +24,7 @@ export default function Post({ post }: Props) {
       <NextHeadSeo
         title={title}
         description='iroiro kakuyo'
-        canonical={"https://tapolskasa.com/article/" + post.slug}
+        canonical={"https://tapolskasa.com/article/" + article.slug}
         og={{
           title: title,
           type: "article"
@@ -34,14 +34,14 @@ export default function Post({ post }: Props) {
         <div>
           <div className={styles.articleHeader}>
             <h1 className={styles.title}>
-            {post.title}
+            {article.title}
             </h1>
           </div>
           <div className={styles.articleBodyWrapper}>
             <div className={styles.articleBody}>
               <div
                 dangerouslySetInnerHTML={{
-                __html: `${post.content}`,
+                __html: `${article.content}`,
                 }}
                 />
             </div>
@@ -61,7 +61,7 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
+  const article = getArticleBySlug(params.slug, [
     'title',
     'date',
     'update',
@@ -69,14 +69,14 @@ export async function getStaticProps({ params }: Params) {
     'ogImage',
     'content',
   ])
-  const content = await markdownToHtml(post.content, {
+  const content = await markdownToHtml(article.content, {
     embedOrigin: 'https://embed.zenn.studio',
   })
 
   return {
     props: {
-      post: {
-        ...post,
+      article: {
+        ...article,
         content,
       },
     },
@@ -84,13 +84,13 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const articles = getAllArticles(['slug'])
 
   return {
-    paths: posts.map((post) => {
+    paths: articles.map((article) => {
       return {
         params: {
-          slug: post.slug,
+          slug: article.slug,
         },
       }
     }),

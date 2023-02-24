@@ -1,14 +1,14 @@
 import NextHeadSeo from 'next-head-seo'
-import PostLink from '@/components/post-link';
+import ArticleLink from '@/components/article-link';
 import styles from '@/styles/Home.module.scss'
-import type { PostType } from "types/post";
-import { getAllPosts } from "libs/api/api";
+import type { ArticleType } from "types/article";
+import { getAllArticles } from "libs/api/api";
 
 type Props = {
-  allPosts: Array<PostType>;
+  allArticles: Array<ArticleType>;
 };
 
-export default function Home({ allPosts }: Props) {
+export default function Home({ allArticles }: Props) {
   return (
     <>
       <NextHeadSeo
@@ -21,13 +21,13 @@ export default function Home({ allPosts }: Props) {
       />
       <div className={styles.container}>
         <div className={styles.contents}>
-          {allPosts.map((post, idx) => (
+          {allArticles.map((article, idx) => (
             <div key={idx}>
-            <PostLink
-            title={post.title}
-            date={post.date}
-            slug={post.slug}
-            excerpt={post.excerpt}
+            <ArticleLink
+            title={article.title}
+            date={article.date}
+            slug={article.slug}
+            excerpt={article.excerpt}
             />
             </div>
           ))}
@@ -38,7 +38,7 @@ export default function Home({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
+  const allArticles = getAllArticles([
     'title',
     'date',
     'slug',
@@ -47,6 +47,6 @@ export const getStaticProps = async () => {
   ])
 
   return {
-    props: { allPosts },
+    props: { allArticles },
   }
 }
