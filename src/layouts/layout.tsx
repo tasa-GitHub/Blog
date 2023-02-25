@@ -12,9 +12,11 @@ export default function Layout ({ children }:{
         <>
             <div className={styles.container}>
                 <Header />
-                <Top/>
-                <main>{children}</main>
-                <Footer/>
+                <main>
+                  <Top/>
+                  {children}
+                </main>
+                <Footer />
             </div>
         </>
     )

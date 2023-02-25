@@ -1,12 +1,9 @@
 .container {
-    width: 100%;
+    width: 100vw;
     height: 400px;
     background: url(https://pbs.twimg.com/media/D8k9epvUwAA343x.png:medium)
     no-repeat center;
     background-size: cover;
-    overflow: hidden;
-    display: grid;
-    place-items: center;
     .blurFilter {
         width: 100%;
         height: 100%;
