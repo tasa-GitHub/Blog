@@ -1,5 +1,5 @@
 .container {
-  width:80vw;
+  width:80%;
   margin: 0 auto;
   margin-bottom: 300px;
   animation-name: fadeinup;
@@ -41,5 +41,11 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width:500px) {
+  .container {
+    width: 100%;
   }
 }
