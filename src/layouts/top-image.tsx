@@ -7,15 +7,17 @@ const raleway = Raleway({
 })
 
 const Top = () => {
-    return (
-        <>
-            <div className={styles.container+" "+raleway.className}>
-                <div className={styles.blurFilter}>
-                    <h1>hello,world.<br/>hello,polskaa.</h1>
-                </div>
+  return (
+    <>
+      <div className={raleway.className}>
+        <div className={styles.container}>
+            <div className={styles.blurFilter}>
+              <h1>hello,world.<br/>hello,polskaa.</h1>
             </div>
-        </>
-    )
+        </div>
+      </div>
+    </>
+  )
 }
 
 export default Top;
