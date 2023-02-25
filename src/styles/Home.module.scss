@@ -3,6 +3,10 @@
   margin: 50px auto;
 }
 
+.articlelink + .articlelink {
+  padding-top:20px;
+}
+
 @media (max-width:500px) {
   .container {
     width: 100%;
