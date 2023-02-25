@@ -1,8 +1,6 @@
 ---
 title: 'Ze◯nに憧れた底辺エンジニアの末路'
 date: '2023-02-23T05:35:07.322Z'
-update: '2023-02-23T05:35:07.322Z'
-url: '/assets/blog/hello-world/cover.jpg'
 ---
 
 ブログ再開しまーす。

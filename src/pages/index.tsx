@@ -21,7 +21,7 @@ export default function Home({ allArticles }: Props) {
       />
       <div className={styles.container}>
         {allArticles.map((article, idx) => (
-          <div key={idx}>
+          <div className={styles.articlelink} key={idx}>
           <ArticleLink
           title={article.title}
           date={article.date}
