@@ -19,12 +19,12 @@
   font-size: 1.5rem;
 }
 
-//marginの外にborderをつけるためwrapper追加
 .content {
   min-height: 200px;
   padding:10px 0;
   background-color: white;
   border-radius: 20px;
+  box-shadow: 0 4px 8px -2px #000a3c1a;
 }
 
 .md {
