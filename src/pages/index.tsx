@@ -13,7 +13,6 @@ export default function Home({ allArticles }: Props) {
     <>
       <NextHeadSeo
         title="Polskaa's BLOG"
-        description='iroiro kakuyo'
         canonical="https://tapolskasa.com"
         og={{
           title: "Polskaa's Blog"

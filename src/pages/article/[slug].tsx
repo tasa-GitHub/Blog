@@ -23,11 +23,9 @@ export default function Article({ article }: Props) {
   <>
       <NextHeadSeo
         title={title}
-        description='iroiro kakuyo'
         canonical={"https://tapolskasa.com/article/" + article.slug}
         og={{
           title: title,
-          type: "article"
         }}
       />
     <article className={styles.container}>

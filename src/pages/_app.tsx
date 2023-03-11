@@ -4,6 +4,7 @@ import { Inter, Raleway } from 'next/font/google'
 import { useEffect } from 'react'
 import Layout from '../layouts/layout'
 import 'zenn-content-css'
+import NextHeadSeo from 'next-head-seo'
 
 const inter = Inter({
   weight: '400',
@@ -16,6 +17,18 @@ export default function App({ Component, pageProps }: AppProps) {
   },[])
   return (
     <>
+      <NextHeadSeo
+        description='iroiro kakuyo'
+        og={{
+          image: "https://tapolskasa.com/og-image.jpg",
+          type: 'website',
+          siteName: 'tapolskasa BLOG',
+          description: 'iroiro kakuyo'
+        }}
+        twitter={{
+          card: "summary"
+        }}
+      />
       <style jsx global>{`
         html {
           font-family: ${inter.style.fontFamily};

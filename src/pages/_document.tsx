@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="ja" prefix="og: http://ogp.me/ns#">
+    <Html lang="ja">
       <Head />
       <body>
         <Main />
