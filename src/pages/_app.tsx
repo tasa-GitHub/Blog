@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <NextHeadSeo
         description='iroiro kakuyo'
         og={{
-          image: "https://tapolskasa.com/og-image.jpg",
+          image: "https://polskaa-polpol-s-blog.vercel.app/og-image.jpg",
           type: 'website',
           siteName: 'tapolskasa BLOG',
           description: 'iroiro kakuyo'
