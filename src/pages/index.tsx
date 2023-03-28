@@ -13,7 +13,7 @@ export default function Home({ allArticles }: Props) {
     <>
       <NextHeadSeo
         title="Polskaa's BLOG"
-        canonical="https://polskaa-polpol-s-blog.vercel.app"
+        canonical="https://polskaa-blog.vercel.app"
         og={{
           title: "Polskaa's Blog"
         }}

@@ -23,7 +23,7 @@ export default function Article({ article }: Props) {
   <>
       <NextHeadSeo
         title={title}
-        canonical={"https://tapolskasa.com/article/" + article.slug}
+        canonical={"https://polskaa-blog.vercel.app/article/" + article.slug}
         og={{
           title: title,
         }}
